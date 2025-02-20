@@ -1,50 +1,53 @@
-# React + TypeScript + Vite
+# master-branch
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 1. Propose a data structure to use for this screen. How the backend should return data
 
-Currently, two official plugins are available:
+# --Ans: Here's a proposed data structure for the backend API response:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# export interface BaseEvent {
 
-## Expanding the ESLint configuration
+# id: number;
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# title: string;
 
-- Configure the top-level `parserOptions` property like this:
+# startTime: string;
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+# endTime: string;
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+# description?: string;
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+}
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+# export interface Appointment extends BaseEvent {
+
+# type: "appointment";
+
+# clientName: string;
+
+# clientAvatar?: string;
+
+# hasVideoCall: boolean;
+
+}
+
+# export interface WebinarEvent extends BaseEvent {
+
+# type: "webinar";
+
+# organizer: string;
+
+# category: string;
+
+# thumbnail?: string;
+
+}
+
+# export type CalendarEvent = Appointment | WebinarEvent;
+
+# **Events Array**: The `events` array contains all the events for the requested time range. Each event includes all the necessary information to display it in the calendar, regardless of its type.
+
+# 4: Let us know what you have learned from this project
+
+# Ans: - UI Components and Styling
+
+# - Date Handling,User Experience,State Management
