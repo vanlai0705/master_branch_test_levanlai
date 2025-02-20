@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "RubikScribble";
-  src: local("RubikScribble-Regular"),
-    url("./assets/fonts/Rubik_Scribble/RubikScribble-Regular.ttf");
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -132,4 +126,3 @@ ul {
 .animate-fade-in {
   animation: fadeIn 0.3s ease-out;
 }
-

@@ -1,8 +1,8 @@
 export interface BaseEvent {
-  id: string;
+  id: number;
   title: string;
-  start: string;
-  end: string;
+  startTime: string;
+  endTime: string;
   description?: string;
 }
 

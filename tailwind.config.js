@@ -13,7 +13,7 @@ export default {
     },
     extend: {
       scale: {
-        '60': '0.60',
+        60: "0.60",
       },
       animation: {
         marquee: "marquee 25s linear infinite",
@@ -28,9 +28,9 @@ export default {
           "100%": { transform: "translateX(0%)" },
         },
         blink: {
-          '0%, 100%': { opacity: '1' },
-          '50%': { opacity: '0' },
-        }
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0" },
+        },
       },
       colors: {
         success: "#87d068",
@@ -92,7 +92,7 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        blink: 'blink 0.5s ease-in-out infinite',
+        blink: "blink 0.5s ease-in-out infinite",
       },
     },
   },
